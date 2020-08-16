@@ -24,21 +24,6 @@ mixin _$IncidentsStore on _IncidentsStore, Store {
           name: '_IncidentsStore.incidentsListCount'))
       .value;
 
-  final _$incidentsListAtom = Atom(name: '_IncidentsStore.incidentsList');
-
-  @override
-  List<DataCaso> get incidentsList {
-    _$incidentsListAtom.reportRead();
-    return super.incidentsList;
-  }
-
-  @override
-  set incidentsList(List<DataCaso> value) {
-    _$incidentsListAtom.reportWrite(value, super.incidentsList, () {
-      super.incidentsList = value;
-    });
-  }
-
   final _$incidentsCountAtom = Atom(name: '_IncidentsStore.incidentsCount');
 
   @override
@@ -64,7 +49,6 @@ mixin _$IncidentsStore on _IncidentsStore, Store {
   @override
   String toString() {
     return '''
-incidentsList: ${incidentsList},
 incidentsCount: ${incidentsCount},
 loadIncidents: ${loadIncidents},
 incidentsListCount: ${incidentsListCount}
