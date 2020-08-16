@@ -13,7 +13,6 @@ class _IncidentsState extends State<Incidents> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     storeIncident.getIncidents();
   }
