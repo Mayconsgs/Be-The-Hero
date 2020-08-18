@@ -8,21 +8,30 @@ part 'incidents_store.g.dart';
 class IncidentsStore = _IncidentsStore with _$IncidentsStore;
 
 abstract class _IncidentsStore with Store {
-  ObservableList<DataCaso> incidentsList =  ObservableList<DataCaso>();
-  
+  ObservableList<DataCaso> incidentsList = ObservableList<DataCaso>();
+
   @observable
   String incidentsCount = '0';
 
   int page = 1;
-  
+
   @action
   getIncidents() async {
-    final Uri listIncidents = Uri.http('192.168.12.38:3333', 'incidents', {'page': page.toString()});
+    final Uri listIncidents = Uri.http(
+      /**
+       * Aqui você deve colocar o endereço do seu servidor local,
+       * usando o IP local da sua máquina.
+       * localhost:3333 NÃO IRÁ FUNCIONAR.
+       * */
+      '192.168.12.38:3333',
+      'incidents',
+      {'page': page.toString()},
+    );
 
     http.Response response = await http.get(listIncidents);
 
-    if(response.statusCode == 200) {
-      List json =  jsonDecode(response.body);
+    if (response.statusCode == 200) {
+      List json = jsonDecode(response.body);
       json.forEach((element) {
         incidentsList.add(DataCaso.fromJson(element));
       });

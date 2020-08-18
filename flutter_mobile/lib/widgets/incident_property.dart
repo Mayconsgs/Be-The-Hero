@@ -6,10 +6,12 @@ class IncidentProperty extends StatelessWidget {
   final String city;
   final String uf;
   final String title;
+  final String description;
   final double value;
   final EdgeInsets padding;
 
-  IncidentProperty({@required this.name,@required this.city, @required this.uf, @required this.title, @required this.value, this.padding});
+
+  IncidentProperty({@required this.name,@required this.city, @required this.uf, @required this.title, @required this.value, this.padding, this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,11 @@ class IncidentProperty extends StatelessWidget {
           SizedBox(height: 8),
           Text(title, style: value),
           SizedBox(height: 24),
+
+          description!= null ? Text('DESCRIÇÃO', style: property) : Container(),
+          description!= null ?SizedBox(height: 8) : Container(),
+          description!= null ?Text(description, style: value) : Container(),
+          description!= null ?SizedBox(height: 24) : Container(),
 
           Text('VALOR', style: property),
           SizedBox(height: 8),
