@@ -17,18 +17,18 @@ terminando de instalar, vamos lá, mão na massa. Ou melhor, mão no código.
 Em seu terminal, dentro do diretório [backend](https://github.com/Mayconsgs/Be-The-Hero/tree/master/backend) do projeto, execute os seguintes comandos:
 
 ```
-yarn install
+$ npm install
 ```
 >Para instalar todas as dependências do projeto.
 
 
 ```
-yarn knex:migrate
+$ npm knex:migrate
 ```
 >Para criar o banco de dados da aplicação.
 
 ```
-yarn start
+$ npm start
 ```
 >Para executar o servidor e assim conseguir utilizar as outras aplicações.
 
@@ -38,12 +38,12 @@ Pronto, feito isso seu servidor estará operando. Lembre-se de **não fechar o p
 Novamente em seu terminal, mas agora dentro do diretório [frontend](https://github.com/Mayconsgs/Be-The-Hero/tree/master/frontend) execute os seguintes comandos:
 
 ```
-yarn install
+$ npm install
 ```
 >Para instalar todas as dependências do projeto.
 
 ```
-yarn start
+$ npm start
 ```
 >Para executar o site em seu navegador.
 
@@ -55,7 +55,7 @@ Com o flutter instalado, vamos continuar.
 
 Primeiro peço que abra a pasta flutter_mobile em seu terminal. Feito isso, vamos aos comandos:
 ```
-flutter pub get
+$ flutter pub get
 ```
 >Para que as dependencias sejam instaladas.
 
@@ -64,12 +64,12 @@ Feito isso abra o arquivo [incidents_store.dart](https://github.com/Mayconsgs/Be
 Feito isso, execute o próximo comando no terminal para recriar a classe MobX:
 
 ```
-flutter packages run build_runner build
+$ flutter packages run build_runner build
 ```
 
 Feito isso seu app está pronto para rodar. Basta conectar um celular via USB com o modo desenvolvedor habilitado ou rodar um emulador Android ou iOS em sua máquina, e executar o comando a seguir:
 ```
-flutter run
+$ flutter run
 ```
 
 Uffa, e é isso, se gostou do projeto ou da explicação, não se esqueça de deixar uma **STAR** no repositório, isso me motiva a continuar seguindo na programação.
