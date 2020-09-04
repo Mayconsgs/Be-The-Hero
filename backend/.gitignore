@@ -1,3 +1,5 @@
+# Pasta de dependencias
 node_modules
 
+# Banco de dados
 src/database/db.sqlite
