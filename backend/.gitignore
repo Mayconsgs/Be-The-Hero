@@ -1,5 +1,7 @@
 # Pasta de dependencias
 node_modules
+package-lock.json
+yarn.lock
 
 # Banco de dados
 src/database/db.sqlite
