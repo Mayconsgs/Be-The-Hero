@@ -1,7 +1,8 @@
 import 'dart:convert';
+
 import 'package:flutter_mobile/datas/data_caso.dart';
-import 'package:mobx/mobx.dart';
 import 'package:http/http.dart' as http;
+import 'package:mobx/mobx.dart';
 
 part 'incidents_store.g.dart';
 
@@ -23,7 +24,7 @@ abstract class _IncidentsStore with Store {
        * usando o IP local da sua máquina.
        * localhost:3333 NÃO IRÁ FUNCIONAR.
        * */
-      '192.168.12.38:3333',
+      '192.168.12.56:3333',
       'incidents',
       {'page': page.toString()},
     );
